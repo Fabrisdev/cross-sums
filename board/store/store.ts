@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { createBoard } from "../logic/board";
+import { boardSize } from "../logic/config";
 import type { Board } from "../types";
 
 type Store = {
@@ -12,7 +13,10 @@ type Actions = {
 };
 
 export const useBoardStore = create<Store>()((set) => ({
-	board: Array.from({ length: 64 }, () => ({ value: 0, valid: false })),
+	board: Array.from({ length: boardSize ** 2 }, () => ({
+		value: 0,
+		valid: false,
+	})),
 	actions: {
 		startGame: () => {
 			set({
