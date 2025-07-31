@@ -12,8 +12,7 @@ type Actions = {
 };
 
 export const useBoardStore = create<Store>()((set) => ({
-	board: [],
-	indicesTable: [],
+	board: Array.from({ length: 64 }, () => ({ value: 0, valid: false })),
 	actions: {
 		startGame: () => {
 			set({

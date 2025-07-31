@@ -12,7 +12,7 @@ export function useBoard() {
 	});
 
 	useEffect(() => {
-		startGame({});
+		startGame();
 	}, []);
 
 	return { board, validNumbersOnlyBoard };
