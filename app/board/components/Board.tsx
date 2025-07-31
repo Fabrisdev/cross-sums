@@ -4,12 +4,9 @@ import { Square } from "@/app/square/components/Square";
 import { useBoard } from "../hooks/useBoard";
 
 export function Board() {
-	const { board, indicesTable } = useBoard();
+	const { board } = useBoard();
 	const boardMapped = board.map((item, index) => (
-		<Square
-			key={index}
-			className={indicesTable[index] !== 0 ? "bg-red-400!" : ""}
-		>
+		<Square key={index} id={index}>
 			{item}
 		</Square>
 	));
