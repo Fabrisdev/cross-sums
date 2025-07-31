@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { useSquare } from "../hooks/useSquare";
 
@@ -15,16 +15,6 @@ export function Square({ children, className, id }: Props) {
 	const { valid } = useSquare({ id });
 	const [marked, setMarked] = useState(false);
 	const [visible, setVisible] = useState(true);
-
-	useEffect(() => {
-		function showValids() {
-			if (valid) setMarked(true);
-		}
-		window.addEventListener("show-valids", showValids);
-		return () => {
-			window.removeEventListener("show-valids", showValids);
-		};
-	}, [valid]);
 
 	function setInvisible() {
 		setVisible(false);

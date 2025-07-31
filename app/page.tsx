@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import { Board } from "./board/components/Board";
 import { BoardHorizontalNumbers } from "./board/components/BoardHorizontalNumbers";
 import { BoardVerticalNumbers } from "./board/components/BoardVerticalNumbers";
@@ -8,11 +5,6 @@ import { Game } from "./board/components/Game";
 import { title } from "./fonts/title";
 
 export default function Home() {
-	useEffect(() => {
-		window.showValids = () => {
-			window.dispatchEvent(new Event("show-valids"));
-		};
-	}, []);
 	return (
 		<main className="flex justify-center items-center flex-col">
 			<h1 className={`${title.className} text-9xl`}>CROSS SUMS</h1>
