@@ -8,13 +8,7 @@ type Store = {
 };
 
 type Actions = {
-	startGame: (options: {
-		boardSize?: number;
-		maxNumberInBoard?: number;
-		distributionBias?: number;
-		minimumValidNumbers?: number;
-		maximumValidNumbers?: number;
-	}) => void;
+	startGame: () => void;
 };
 
 export const useBoardStore = create<Store>()((set) => ({
