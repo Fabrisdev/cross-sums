@@ -49,7 +49,6 @@ export function Square({ children, className, id }: Props) {
 			className={`bg-white text-black aspect-square flex justify-center items-center cursor-pointer hover:bg-blue-200 w-12 ${className} ${marked && "bg-red-400!"}`}
 		>
 			{visible && children}
-			{valid ? "si" : "no"}
 		</button>
 	);
 }
