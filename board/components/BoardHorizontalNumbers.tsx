@@ -6,7 +6,7 @@ import { getHorizontalNumbers } from "../logic/board";
 
 export function BoardHorizontalNumbers() {
 	const { validNumbersOnlyBoard } = useBoard();
-	const horizontalNumbers = getHorizontalNumbers(validNumbersOnlyBoard, 8);
+	const horizontalNumbers = getHorizontalNumbers(validNumbersOnlyBoard);
 	const horizontalNumbersMapped = horizontalNumbers.map((item, index) => (
 		<NumberTextbox
 			key={index}

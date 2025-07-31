@@ -6,7 +6,7 @@ import { getVerticalNumbers } from "../logic/board";
 
 export function BoardVerticalNumbers() {
 	const { validNumbersOnlyBoard } = useBoard();
-	const verticalNumbers = getVerticalNumbers(validNumbersOnlyBoard, 8);
+	const verticalNumbers = getVerticalNumbers(validNumbersOnlyBoard);
 	const verticalNumbersMapped = verticalNumbers.map((item, index) => (
 		<NumberTextbox
 			key={index}

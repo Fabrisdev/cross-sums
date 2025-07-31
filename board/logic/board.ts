@@ -13,8 +13,9 @@ export function createBoard(): Board {
 	}));
 }
 
-export function getHorizontalNumbers(board: Board, size: number) {
+export function getHorizontalNumbers(board: Board) {
 	if (board.length === 0) return [];
+	const size = Math.sqrt(board.length);
 	const numbers = [];
 	for (let x = 0; x < size; x++) {
 		let sum = 0;
@@ -27,8 +28,9 @@ export function getHorizontalNumbers(board: Board, size: number) {
 	return numbers;
 }
 
-export function getVerticalNumbers(board: Board, size: number) {
+export function getVerticalNumbers(board: Board) {
 	if (board.length === 0) return [];
+	const size = Math.sqrt(board.length);
 	const numbers = [];
 	for (let x = 0; x < size; x++) {
 		let sum = 0;
