@@ -1,1 +1,4 @@
-export type Board = number[];
+export type Board = {
+	value: number;
+	valid: boolean;
+}[];

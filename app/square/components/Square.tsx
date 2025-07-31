@@ -12,7 +12,7 @@ type Props = {
 };
 
 export function Square({ children, className, id }: Props) {
-	const { type } = useSquare({ id });
+	const { valid } = useSquare({ id });
 	const [marked, setMarked] = useState(false);
 	const [visible, setVisible] = useState(true);
 
@@ -21,13 +21,13 @@ export function Square({ children, className, id }: Props) {
 	}
 
 	function handleDiscardSquare() {
-		if (type === "VALID") return toast.error("¡Ese va!");
+		if (valid) return toast.error("¡Ese va!");
 		setInvisible();
 	}
 
 	function handleMarkSquare(event: React.MouseEvent) {
 		event.preventDefault();
-		if (type === "INVALID") return toast.error("¡Ese no es!");
+		if (!valid) return toast.error("¡Ese no es!");
 		setMarked(true);
 	}
 

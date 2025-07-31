@@ -5,8 +5,8 @@ import { useBoard } from "../hooks/useBoard";
 import { getHorizontalNumbers } from "../logic/board";
 
 export function BoardHorizontalNumbers() {
-	const { indicesTable } = useBoard();
-	const horizontalNumbers = getHorizontalNumbers(indicesTable, 8);
+	const { validNumbersOnlyBoard } = useBoard();
+	const horizontalNumbers = getHorizontalNumbers(validNumbersOnlyBoard, 8);
 	const horizontalNumbersMapped = horizontalNumbers.map((item, index) => (
 		<NumberTextbox
 			key={index}

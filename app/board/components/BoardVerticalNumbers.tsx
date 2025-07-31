@@ -5,8 +5,8 @@ import { useBoard } from "../hooks/useBoard";
 import { getVerticalNumbers } from "../logic/board";
 
 export function BoardVerticalNumbers() {
-	const { indicesTable } = useBoard();
-	const verticalNumbers = getVerticalNumbers(indicesTable, 8);
+	const { validNumbersOnlyBoard } = useBoard();
+	const verticalNumbers = getVerticalNumbers(validNumbersOnlyBoard, 8);
 	const verticalNumbersMapped = verticalNumbers.map((item, index) => (
 		<NumberTextbox
 			key={index}
