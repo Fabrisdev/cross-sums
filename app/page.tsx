@@ -1,8 +1,8 @@
-import { Board } from "./board/components/Board";
-import { BoardHorizontalNumbers } from "./board/components/BoardHorizontalNumbers";
-import { BoardVerticalNumbers } from "./board/components/BoardVerticalNumbers";
-import { Game } from "./board/components/Game";
-import { title } from "./fonts/title";
+import { Board } from "@/board/components/Board";
+import { BoardHorizontalNumbers } from "@/board/components/BoardHorizontalNumbers";
+import { BoardVerticalNumbers } from "@/board/components/BoardVerticalNumbers";
+import { Game } from "@/board/components/Game";
+import { title } from "@/fonts/title";
 
 export default function Home() {
 	return (

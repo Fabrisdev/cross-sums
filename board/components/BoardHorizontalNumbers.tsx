@@ -1,6 +1,6 @@
 "use client";
 
-import { NumberTextbox } from "@/app/square/components/NumberTextbox";
+import { NumberTextbox } from "@/square/components/NumberTextbox";
 import { useBoard } from "../hooks/useBoard";
 import { getHorizontalNumbers } from "../logic/board";
 

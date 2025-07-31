@@ -1,6 +1,6 @@
 "use client";
 
-import { Square } from "@/app/square/components/Square";
+import { Square } from "@/square/components/Square";
 import { useBoard } from "../hooks/useBoard";
 
 export function Board() {

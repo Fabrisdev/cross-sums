@@ -1,4 +1,4 @@
-import { useBoard } from "@/app/board/hooks/useBoard";
+import { useBoard } from "@/board/hooks/useBoard";
 
 type Props = {
 	id: number;
