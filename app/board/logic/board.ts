@@ -1,11 +1,11 @@
 import type { Board } from "../types";
 
 export function createBoard({
-	boardSize = 8 * 8,
+	boardSize = 8,
 	maxNumberInBoard = 9,
 	distributionBias = 2,
 }) {
-	return Array.from({ length: boardSize }, () =>
+	return Array.from({ length: boardSize ** 2 }, () =>
 		Math.ceil(Math.random() ** distributionBias * maxNumberInBoard),
 	);
 }
