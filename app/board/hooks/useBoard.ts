@@ -11,7 +11,10 @@ export function useBoard() {
 	const updateIndices = useBoardStore((state) => state.updateIndices);
 
 	useEffect(() => {
-		const newBoard = createBoard({});
+		const newBoard = createBoard({
+			boardSize: 8,
+			distributionBias: 1,
+		});
 		updateBoard(newBoard);
 		const indicesBoard = generateRandomIndices({
 			board: newBoard,
