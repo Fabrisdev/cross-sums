@@ -1,10 +1,15 @@
 import type { Board } from "../types";
-import { boardSize, distributionBias, maxNumberInBoard } from "./config";
+import {
+	boardSize,
+	distributionBias,
+	maxNumberInBoard,
+	validNumbersBias,
+} from "./config";
 
 export function createBoard(): Board {
 	return Array.from({ length: boardSize ** 2 }, () => ({
 		value: Math.ceil(Math.random() ** distributionBias * maxNumberInBoard),
-		valid: Math.random() > 0.5,
+		valid: Math.random() > validNumbersBias,
 	}));
 }
 
