@@ -1,0 +1,20 @@
+"use client";
+
+import { Square } from "@/app/square/components/Square";
+import { useBoard } from "../hooks/useBoard";
+import { getHorizontalNumbers } from "../logic/board";
+
+export function BoardHorizontalNumbers() {
+	const { indicesTable } = useBoard();
+	const horizontalNumbers = getHorizontalNumbers(indicesTable, 8);
+	const horizontalNumbersMapped = horizontalNumbers.map((item, index) => (
+		<Square key={index} className="hover:bg-white! cursor-auto! rounded-full">
+			{item}
+		</Square>
+	));
+	return (
+		<div className="bg-blue-400 rounded-2xl rounded-l-none flex gap-1 p-2 pr-0">
+			{horizontalNumbersMapped}
+		</div>
+	);
+}
